@@ -14,4 +14,14 @@ class PostsController < ApplicationController
 		@post = Post.find(params[:id])
 	end
 
+	def destroy
+		@post = Post.where(id: params[:id]).first
+		if @post && @post.destroy
+			flash[:notice] = "Post deleted sucessfully."
+		else
+			flash[:alert] = "There was a problem deleting that post."
+		end
+		redirect_to "/posts"
+	end
+
 end

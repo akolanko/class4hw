@@ -8,18 +8,41 @@
 </head>
 <body>
 
-	<% if flash[:notice] %>
-		<div class="flash notice">
-			<%= flash[:notice] %>
-		</div>
-	<% end %>
-	<% if flash[:alert] %>
-		<div class="flash alert">
-			<%= flash[:alert] %>
-		</div>
-	<% end %>
+	<div id="container">
 
-	<%= yield %>
+		<% if flash[:notice] %>
+			<div class="flash notice">
+				<%= flash[:notice] %>
+			</div>
+		<% end %>
+		<% if flash[:alert] %>
+			<div class="flash alert">
+				<%= flash[:alert] %>
+			</div>
+		<% end %>
 
+		<div id="navbar">
+			<ul id="nav">
+				<li>
+					<a class="navlink" href="/">
+						Home
+					</a>
+				</li>
+				<li>
+					<a class="navlink" href="/users">
+						All Users
+					</a>
+				</li>
+				<li>
+					<a class="navlink" href="/posts">
+						All Posts
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<%= yield %>
+
+	</div>
 </body>
 </html>

@@ -1,3 +1,84 @@
+body{
+	font-family: "Sackers Gothic Std", sans serif;
+	font-size: 14px;
+	text-transform: lowercase;
+	color: #788281;
+}
+
+#container{
+	width: 800px;
+	margin: 0 auto;
+	padding: 50px 100px 0 100px;
+	/*background-color: #e5f8f7;*/
+}
+
+a:link{
+	color: #b9c8c7;
+	text-decoration: none;
+}
+
+a:visited{
+	color: #b9c8c7;
+}
+
+a:hover{
+	color: #889393;
+}
+
+#navbar{
+	background-color: #d8eae9;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+ul#nav{
+	list-style: none;
+}
+
+ul#nav li{
+	display: inline;
+	padding: 20px;
+	font-size: 1.2em;
+}
+
+a.navlink:link{
+	color: #788281;
+}
+
+a.navlink:visited{
+	color: #788281;
+}
+
+a.navlink:hover{
+	color: #b9c8c7;
+}
+
+.posttitle{
+	font-size: 1.2em;
+}
+
+.posttime{
+	font-size: .9em;
+}
+
+.myposts{
+	font-size: 1.2em;
+}
+
+.username{
+	font-size: 1.2em;
+}
+
+.welcome{
+	text-align: center;
+}
+
+/*#889393 #d8eae9 #b8c7c6*/
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

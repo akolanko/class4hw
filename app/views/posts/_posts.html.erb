@@ -3,10 +3,10 @@
 	<% @user = User.find(@userid) %>
 	<%= link_to "@#{@user.username}", user_path(@user.id) %>
 	<br>
-	<%= link_to post.title, user_post_path(@user.id, post.id) %>
+	<span class="posttitle"><%= link_to post.title, user_post_path(@user.id, post.id) %></span>
 	<br>
 	<%= post.body %>
 	<br>
-	<%= post.created_at %>
-	<br><br>
+	<span class="posttime"><%= post.created_at %></span>
+	<br><br><hr><br>
 <% end %>
