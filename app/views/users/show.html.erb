@@ -1,0 +1,29 @@
+<h1><%=@user.fname%>'s Profile</h1>
+
+<% if @profile.gender %>
+	<b>Gender:</b> <%= @profile.gender %>
+	<br>
+<% end %>
+<% if @profile.religion %>
+	<b>Religion:</b> <%= @profile.religion %>
+	<br>
+<% end %>
+<% if @profile.city %>
+	<b>City:</b> <%= @profile.city %>
+	<br>
+<% end %>
+<% if @profile.education %>
+	<b>Education:</b> <%= @profile.education %>
+	<br>
+<% end %>
+<% if @profile.employment %>
+	<b>Employment:</b> <%= @profile.employment %>
+	<br>
+<% end %>
+
+<br>
+
+<%= link_to "My Posts", user_posts_path(@user.id) %>
+<br><br>
+
+<%= link_to "Delete #{@user.username}", user_path(@user.id), method: :delete, confirm: "Are you sure you want to delete @#{@user.username}?" %>

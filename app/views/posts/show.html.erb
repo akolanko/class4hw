@@ -1,0 +1,7 @@
+<h3><%= @post.title %></h3>
+<br>
+<%= @post.body %>
+<br>
+<%= @post.created_at %>
+<br>
+<%= link_to "@#{@user.username}", user_path(@user.id) %>

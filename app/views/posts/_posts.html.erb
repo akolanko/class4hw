@@ -1,0 +1,12 @@
+<% @posts.reverse.each do |post| %>
+	<% @userid = post.user_id %>
+	<% @user = User.find(@userid) %>
+	<%= link_to "@#{@user.username}", user_path(@user.id) %>
+	<br>
+	<%= link_to post.title, user_post_path(@user.id, post.id) %>
+	<br>
+	<%= post.body %>
+	<br>
+	<%= post.created_at %>
+	<br><br>
+<% end %>
